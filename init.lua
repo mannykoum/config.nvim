@@ -75,6 +75,11 @@ require('lazy').setup({
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
+  -- Zen mode
+  {
+    "folke/zen-mode.nvim"
+  },
+
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
   { -- LSP Configuration & Plugins
@@ -210,6 +215,9 @@ vim.o.hlsearch = false
 
 -- Make line numbers default
 vim.wo.number = true
+
+-- Highlight column 80
+vim.o.colorcolumn = '80'
 
 -- Enable mouse mode
 vim.o.mouse = 'a'

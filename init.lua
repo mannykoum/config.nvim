@@ -43,6 +43,13 @@ require("user.plugins")
 require("user.copilot")
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
+vim.g.tabstop = 4
+vim.g.shiftwidth = 4
+vim.g.softtabstop = 0
+vim.g.expandtab = true
+vim.g.autoindent = true
+vim.g.smartindent = true
+vim.g.smarttab = true
 
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
@@ -314,7 +321,7 @@ vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { de
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'typescript', 'help', 'vim' },
+  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'vim' },
 
   -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
   auto_install = false,

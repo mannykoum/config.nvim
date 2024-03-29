@@ -115,6 +115,7 @@ require('lazy').setup({
 
   -- CoPilot
   'github/copilot.vim',
+
   -- Useful plugin to show you pending keybinds.
   { 'folke/which-key.nvim',  opts = {} },
   {
@@ -163,6 +164,58 @@ require('lazy').setup({
       vim.cmd.colorscheme 'onedark'
     end,
   },
+  { -- Theme for light mode
+    'folke/tokyonight.nvim',
+    config = function()
+      vim.g.tokyonight_style = 'night'
+      vim.cmd.colorscheme 'tokyonight'
+    end,
+  },
+  { -- Github light theme
+    'projekt0n/github-nvim-theme',
+    config = function()
+      require('github-theme').setup {
+        themeStyle = 'light',
+      }
+    end,
+  },
+  { -- Github dark theme
+    'projekt0n/github-nvim-theme',
+    config = function()
+      require('github-theme').setup {
+        themeStyle = 'dark',
+      }
+    end,
+  },
+  { -- Theme inspired by Atom
+    'sainnhe/everforest',
+    config = function()
+      vim.g.everforest_background = 'hard'
+      vim.cmd.colorscheme 'everforest'
+    end,
+  },
+  { -- Theme inspired by Atom
+    'sainnhe/gruvbox-material',
+    config = function()
+      vim.g.gruvbox_material_background = 'hard'
+      vim.cmd.colorscheme 'gruvbox-material'
+    end,
+  },
+  { -- Theme inspired by Atom
+    'sainnhe/edge',
+    config = function()
+      vim.g.edge_style = 'neon'
+      vim.cmd.colorscheme 'edge'
+    end,
+  },
+  { -- Theme inspired by Atom
+    'sainnhe/sonokai',
+    config = function()
+      vim.g.sonokai_style = 'andromeda'
+      vim.cmd.colorscheme 'sonokai'
+    end,
+  },
+
 
   { -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
@@ -214,6 +267,21 @@ require('lazy').setup({
       'nvim-treesitter/nvim-treesitter-textobjects',
     },
     build = ':TSUpdate',
+  },
+
+  -- GUIhua a gui library for nvim
+  {
+    'ray-x/guihua.lua',
+    build = 'cd lua/fzy && make',
+  },
+
+  -- Navigator for nvim
+  {
+    'ray-x/navigator.lua',
+    dependencies = {
+      'ray-x/guihua.lua',
+      'neovim/nvim-lspconfig',
+    },
   },
 
   { -- Cheatsheet for nvim keybindings
@@ -583,6 +651,9 @@ cmp.setup {
 -- Keymap for marp
 vim.keymap.set('n', '<leader>mp', ':!marp %:p<CR>',
   { desc = 'Turn current md file to html presentation' })
+
+-- Keymap for exiting insert mode
+vim.keymap.set('i', 'jj', '<Esc>', { noremap = true, silent = true })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

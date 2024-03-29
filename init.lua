@@ -23,11 +23,6 @@
 What is Kickstart?
 
   Kickstart.nvim is *not* a distribution.
-=======
-Kickstart.nvim is a template for your own configuration.
-  The goal is that you can read every line of code, top-to-bottom, and understand
-  what your configuration is doing.
->>>>>>> Added Copilot and Cheatsheet plugind, as well as a user folder
 
   Kickstart.nvim is a starting point for your own configuration.
     The goal is that you can read every line of code, top-to-bottom, understand
@@ -58,25 +53,19 @@ Kickstart Guide:
 
     (If you already know the Neovim basics, you can skip this step.)
 
-<<<<<<< HEAD
   Once you've completed that, you can continue working through **AND READING** the rest
   of the kickstart init.lua.
->>>>>>> Added Copilot and Cheatsheet plugind, as well as a user folder
 
   Next, run AND READ `:help`.
     This will open up a help window with some basic information
     about reading, navigating and searching the builtin help documentation.
 
-<<<<<<< HEAD
     This should be the first place you go to look when you're stuck or confused
     with something. It's one of my favorite Neovim features.
-=======
->>>>>>> Added Copilot and Cheatsheet plugind, as well as a user folder
 
     MOST IMPORTANTLY, we provide a keymap "<space>sh" to [s]earch the [h]elp documentation,
     which is very useful when you're not exactly sure of what you're looking for.
 
-<<<<<<< HEAD
   I have left several `:help X` comments throughout the init.lua
     These are hints about where to find more information about the relevant settings,
     plugins or Neovim features used in Kickstart.

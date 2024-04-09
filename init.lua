@@ -861,7 +861,6 @@ require('lazy').setup({
         'rust',
         'tsx',
         'typescript',
-        'help',
         'html',
         'luadoc',
         'markdown',

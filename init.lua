@@ -193,9 +193,9 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
--- Change cheatsheet default keymap
-vim.keymap.set('n', '<leader>h', ':<C-U>Cheatsheet<CR>', { noremap = true, silent = true, desc = '[h] Search nvim cheatsheet' })
-
+-- -- Change cheatsheet default keymap
+-- vim.keymap.set('n', '<leader>h', ':<C-U>Cheatsheet<CR>', { noremap = true, silent = true, desc = '[h] Search nvim cheatsheet' })
+--
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -596,7 +596,11 @@ require('lazy').setup({
       local servers = {
         clangd = {},
         -- gopls = {},
-        -- pyright = {},
+        bashls = {
+          cmd = { 'bash-language-server', 'start' },
+          filetypes = { 'sh', 'bash' },
+        },
+        pyright = {},
         rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --

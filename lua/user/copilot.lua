@@ -1,5 +1,5 @@
 vim.g.copilot_filetypes = {
-  ['*'] = true,
+  -- ['*'] = true,
   ['javascript'] = true,
   ['typescript'] = true,
   ['lua'] = true,
@@ -7,7 +7,7 @@ vim.g.copilot_filetypes = {
   ['c'] = true,
   ['c#'] = true,
   ['c++'] = true,
-  ['go'] = true,
+  -- ['go'] = true,
   ['python'] = true,
   ['bash'] = true,
   ['matlab'] = true,

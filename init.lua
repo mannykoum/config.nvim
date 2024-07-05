@@ -865,7 +865,7 @@ require('lazy').setup({
         'typescript',
         'html',
         'luadoc',
-        'markdown',
+        -- 'markdown',
         'vim',
         'vimdoc',
       },

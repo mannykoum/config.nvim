@@ -937,6 +937,7 @@ require('lazy').setup({
 })
 
 require 'keybindings'
+require 'lsp-project-detection'
 require 'user.plugins'
 require 'user.copilot'
 -- The line beneath this is called `modeline`. See `:help modeline`

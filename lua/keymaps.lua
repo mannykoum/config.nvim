@@ -46,3 +46,15 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- vim: ts=2 sts=2 sw=2 et
+
+-- My own keymaps/keybindings
+
+-- set the vertical bar at 80 characters
+vim.cmd 'set colorcolumn=80'
+
+-- exit insert mode with jj
+vim.api.nvim_set_keymap('i', 'jj', '<Esc>', { noremap = true })
+
+-- Save / write to file with CTRL-s
+vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', { noremap = true })
+vim.api.nvim_set_keymap('i', '<C-s>', ':w<CR>', { noremap = true })

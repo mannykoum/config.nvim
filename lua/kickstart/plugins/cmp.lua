@@ -118,8 +118,6 @@ return {
           { name = 'copilot', group_index = 2 },
         },
       }
-      -- Add this in your cmp.lua config function
-      print('Available sources:', vim.inspect(cmp.get_all_sources()))
     end,
   },
 }

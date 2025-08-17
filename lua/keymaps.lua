@@ -56,5 +56,10 @@ vim.cmd 'set colorcolumn=80'
 vim.api.nvim_set_keymap('i', 'jj', '<Esc>', { noremap = true })
 
 -- Save / write to file with CTRL-s
-vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-s>', ':w<CR>', { noremap = true })
+vim.keymap.set(
+  { 'n', 'i' }, -- modes: Normal & Insert
+  '<C-s>', -- key
+  '<Cmd>write<CR>', -- <Cmd> works as :write in Normal, and <C-o>:write in Insert
+  { silent = true, desc = 'Save buffer' }
+)
+-- alternative I could call the vim.cmd.write() function

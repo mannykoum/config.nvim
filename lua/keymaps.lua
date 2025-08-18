@@ -63,3 +63,6 @@ vim.keymap.set(
   { silent = true, desc = 'Save buffer' }
 )
 -- alternative I could call the vim.cmd.write() function
+
+-- keymap to toggle onedark theme (see plugins/onedark.lua)
+vim.keymap.set('n', '<leader>tc', '<CMD>lua require("onedark").toggle()<CR>')

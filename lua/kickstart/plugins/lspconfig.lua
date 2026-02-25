@@ -236,6 +236,17 @@ return {
             },
           },
         },
+        harper_ls = {
+          -- cmd = { ... },
+          -- filetypes = { ... },
+          -- capabilities = {},
+          settings = {
+            harper_ls = {
+              -- You can toggle below to ignore `harper-ls`'s noisy `unused-variable` warnings
+              -- diagnostics = { disable = { 'unused-variable' } },
+            },
+          },
+        },
       }
 
       -- Ensure the servers and tools above are installed

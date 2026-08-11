@@ -57,7 +57,7 @@ require('blink.cmp').setup {
     documentation = { auto_show = false, auto_show_delay_ms = 500 },
 
     -- CUSTOM: annotate each entry with the source it came from, the way the
-    -- old nvim-cmp `formatting.menu` table used to ([LSP], [Copilot], ...).
+    -- old nvim-cmp `formatting.menu` table used to ([LSP], [Path], ...).
     menu = {
       draw = {
         columns = { { 'kind_icon' }, { 'label', 'label_description', gap = 1 }, { 'source_name' } },
@@ -66,17 +66,7 @@ require('blink.cmp').setup {
   },
 
   sources = {
-    -- CUSTOM: `copilot` is provided by `fang2hou/blink-copilot`, installed in
-    -- `lua/custom/plugins/copilot.lua`.
-    default = { 'copilot', 'lsp', 'path', 'snippets' },
-    providers = {
-      copilot = {
-        name = 'copilot',
-        module = 'blink-copilot',
-        score_offset = 100,
-        async = true,
-      },
-    },
+    default = { 'lsp', 'path', 'snippets' },
   },
 
   snippets = { preset = 'luasnip' },

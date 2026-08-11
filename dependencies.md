@@ -1,6 +1,7 @@
 # Required Dependencies
 
-- **Neovim (v0.8 or later)**
+- **Neovim (v0.12 or later)**
+  - Required by the `vim.pack` based plugin setup (see `lua/pack.lua`).
   - Download and install from the [Neovim releases page](https://github.com/neovim/neovim/releases).
 
 - **Git**

@@ -9,7 +9,7 @@
   - Install via your system package manager (e.g., `sudo apt-get install git` on Ubuntu or `brew install git` on macOS).
 
 - **Node.js and npm**
-  - Required for tools such as `markdownlint-cli` and other Node-based utilities.
+  - Required for tools such as `markdownlint-cli2` and other Node-based utilities.
   - **macOS:** Install via [Homebrew](https://brew.sh/):
     ```bash
     brew install node
@@ -19,11 +19,11 @@
     sudo apt-get install nodejs npm
     ```
 
-- **markdownlint-cli**
+- **markdownlint-cli2**
   - Lints Markdown files. This is used by the autocommand that runs on file save.
   - Install globally using npm:
     ```bash
-    npm install -g markdownlint-cli
+    npm install -g markdownlint-cli2
     ```
   - Make sure the installation path (e.g., `~/.npm-global/bin`) is included in your PATH.
 

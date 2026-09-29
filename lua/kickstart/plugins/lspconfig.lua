@@ -139,6 +139,9 @@ local servers = {
 
   stylua = {}, -- Used to format Lua code
 
+  -- PICO-8 Lua dialect; `p8` filetype is set up in `custom/plugins/pico8.lua`
+  pico8_ls = {},
+
   -- Special Lua Config, as recommended by neovim help docs
   lua_ls = {
     on_init = function(client)
